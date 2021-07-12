@@ -292,10 +292,7 @@
     <Content Include="Views\Seats\Details.cshtml" />
     <Content Include="Views\Seats\Edit.cshtml" />
     <Content Include="Views\Seats\Index.cshtml" />
-    <Content Include="Views\Shows\Create.cshtml" />
-    <Content Include="Views\Shows\Delete.cshtml" />
     <Content Include="Views\Shows\Details.cshtml" />
-    <Content Include="Views\Shows\Edit.cshtml" />
     <Content Include="Views\Shows\Index.cshtml" />
     <Content Include="Views\ShowDays\Create.cshtml" />
     <Content Include="Views\ShowDays\Delete.cshtml" />
