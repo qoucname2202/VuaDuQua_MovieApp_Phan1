@@ -170,6 +170,11 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CinemasController.cs" />
     <Compile Include="Areas\Admin\Controllers\MoviesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ReservationsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SeatsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShowDaysController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShowsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ShowTimesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CinemasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,6 +214,10 @@
     <Compile Include="Migrations\202107050257426_ChangeImageToMovieTable.cs" />
     <Compile Include="Migrations\202107050257426_ChangeImageToMovieTable.Designer.cs">
       <DependentUpon>202107050257426_ChangeImageToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107120301215_AppliedChangeRequireTime.cs" />
+    <Compile Include="Migrations\202107120301215_AppliedChangeRequireTime.Designer.cs">
+      <DependentUpon>202107120301215_AppliedChangeRequireTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -256,6 +265,31 @@
     <Content Include="Areas\Admin\Views\Movies\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Movies\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Movies\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Seats\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Seats\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Seats\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Seats\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Seats\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shows\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Shows\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Shows\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Shows\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shows\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowDays\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowDays\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowDays\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowDays\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowDays\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowTimes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowTimes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowTimes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowTimes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ShowTimes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservations\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservations\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservations\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservations\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservations\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -366,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107050257426_ChangeImageToMovieTable.resx">
       <DependentUpon>202107050257426_ChangeImageToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107120301215_AppliedChangeRequireTime.resx">
+      <DependentUpon>202107120301215_AppliedChangeRequireTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

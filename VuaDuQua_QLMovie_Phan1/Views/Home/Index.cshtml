@@ -27,7 +27,7 @@
             <img src="~/Content/images/@Html.DisplayFor(modelItem => item.Image)" alt="@item.Name" width="70" height="90" />
         </td>
         <td>
-            @Html.ActionLink("Xem Chi Tiết", "Details", new { id=item.Id }) 
+            @Html.ActionLink("Xem Chi Tiết", "Details", "Movies", new { id=item.Id },null) 
         </td>
     </tr>
 }

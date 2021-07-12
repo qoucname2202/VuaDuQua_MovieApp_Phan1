@@ -12,108 +12,107 @@ using VuaDuQua_QLMovie_Phan1.Models.CinemaEntities;
 namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
 {
     [Authorize]
-    public class MoviesController : Controller
+    public class ShowDaysController : Controller
     {
-       
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Admin/Movies
+        // GET: Admin/ShowDays
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.ShowDays.ToList());
         }
 
-        // GET: Admin/Movies/Details/5
+        // GET: Admin/ShowDays/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            ShowDay showDay = db.ShowDays.Find(id);
+            if (showDay == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(showDay);
         }
 
-        // GET: Admin/Movies/Create
+        // GET: Admin/ShowDays/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Movies/Create
+        // POST: Admin/ShowDays/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,Day")] ShowDay showDay)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
+                db.ShowDays.Add(showDay);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
+            return View(showDay);
         }
 
-        // GET: Admin/Movies/Edit/5
+        // GET: Admin/ShowDays/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            ShowDay showDay = db.ShowDays.Find(id);
+            if (showDay == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(showDay);
         }
 
-        // POST: Admin/Movies/Edit/5
+        // POST: Admin/ShowDays/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Edit([Bind(Include = "Id,Day")] ShowDay showDay)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
+                db.Entry(showDay).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(movie);
+            return View(showDay);
         }
 
-        // GET: Admin/Movies/Delete/5
+        // GET: Admin/ShowDays/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            ShowDay showDay = db.ShowDays.Find(id);
+            if (showDay == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(showDay);
         }
 
-        // POST: Admin/Movies/Delete/5
+        // POST: Admin/ShowDays/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Movie movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
+            ShowDay showDay = db.ShowDays.Find(id);
+            db.ShowDays.Remove(showDay);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

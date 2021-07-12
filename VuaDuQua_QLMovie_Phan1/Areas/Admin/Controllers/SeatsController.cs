@@ -12,108 +12,107 @@ using VuaDuQua_QLMovie_Phan1.Models.CinemaEntities;
 namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
 {
     [Authorize]
-    public class MoviesController : Controller
+    public class SeatsController : Controller
     {
-       
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Admin/Movies
+        // GET: Admin/Seats
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.Seats.ToList());
         }
 
-        // GET: Admin/Movies/Details/5
+        // GET: Admin/Seats/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Seat seat = db.Seats.Find(id);
+            if (seat == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(seat);
         }
 
-        // GET: Admin/Movies/Create
+        // GET: Admin/Seats/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Movies/Create
+        // POST: Admin/Seats/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,SeatNo,Status,Price")] Seat seat)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
+                db.Seats.Add(seat);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
+            return View(seat);
         }
 
-        // GET: Admin/Movies/Edit/5
+        // GET: Admin/Seats/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Seat seat = db.Seats.Find(id);
+            if (seat == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(seat);
         }
 
-        // POST: Admin/Movies/Edit/5
+        // POST: Admin/Seats/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Edit([Bind(Include = "Id,SeatNo,Status,Price")] Seat seat)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
+                db.Entry(seat).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(movie);
+            return View(seat);
         }
 
-        // GET: Admin/Movies/Delete/5
+        // GET: Admin/Seats/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            Seat seat = db.Seats.Find(id);
+            if (seat == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(seat);
         }
 
-        // POST: Admin/Movies/Delete/5
+        // POST: Admin/Seats/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Movie movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
+            Seat seat = db.Seats.Find(id);
+            db.Seats.Remove(seat);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -32,9 +32,7 @@
             <img src="~/Content/images/@item.Image" alt="@item.Name" width="170" height="190"/>
         </td>
         <td style="padding-top:60px;font-size:13px;font-weight:500">
-            @Html.ActionLink("Sửa", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Xem Chi Tiết", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Xóa", "Delete", new { id=item.Id })
+            @Html.ActionLink("Xem Chi Tiết", "Details", new { id=item.Id })
         </td>
     </tr>
 }

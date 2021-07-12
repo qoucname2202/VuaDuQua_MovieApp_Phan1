@@ -12,6 +12,7 @@ namespace VuaDuQua_QLMovie_Phan1.Models.CinemaEntities
         public int Id { get; set; }
 
         [DisplayName("Giờ Chiếu")]
+        [Required(ErrorMessage = "Vui lòng nhập thời gian")]
         public string Time { get; set; }
 
         public ICollection<Show> Shows { get; set; }
