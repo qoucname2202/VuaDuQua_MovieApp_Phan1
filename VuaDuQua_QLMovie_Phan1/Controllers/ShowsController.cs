@@ -29,7 +29,7 @@ namespace VuaDuQua_QLMovie_Phan1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Show show = db.Shows.Find(id);
+            Show show = db.Shows.Include(s => s.Cinema).Include(s => s.Movie).Include(s => s.ShowDay).Include(s => s.ShowTime).Where(s=>s.Id == id).FirstOrDefault();
             if (show == null)
             {
                 return HttpNotFound();

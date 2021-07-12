@@ -30,7 +30,7 @@ namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Reservation reservation = db.Reservations.Find(id);
+            Reservation reservation = db.Reservations.Include(r => r.Customer).Include(r => r.Seat).Include(r => r.Show).Include(r => r.Show.Cinema).Include(r => r.Show.Movie).Include(r => r.Show.ShowDay).Include(r => r.Show.ShowTime).Where(p => p.Id == id).FirstOrDefault();
             if (reservation == null)
             {
                 return HttpNotFound();
