@@ -291,6 +291,7 @@
     <Content Include="Content\images\k9.jpg" />
     <Content Include="Content\images\left.png" />
     <Content Include="Content\images\logo2.png" />
+    <Content Include="Content\images\logo_app.png" />
     <Content Include="Content\images\m1.jpg" />
     <Content Include="Content\images\m2.jpg" />
     <Content Include="Content\images\m3.jpg" />
