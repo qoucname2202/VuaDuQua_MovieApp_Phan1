@@ -219,6 +219,10 @@
     <Compile Include="Migrations\202107120301215_AppliedChangeRequireTime.Designer.cs">
       <DependentUpon>202107120301215_AppliedChangeRequireTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107190234102_AddPriceColumnToMovieTable.cs" />
+    <Compile Include="Migrations\202107190234102_AddPriceColumnToMovieTable.Designer.cs">
+      <DependentUpon>202107190234102_AddPriceColumnToMovieTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CinemaEntities\Cinema.cs" />
@@ -523,6 +527,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107120301215_AppliedChangeRequireTime.resx">
       <DependentUpon>202107120301215_AppliedChangeRequireTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190234102_AddPriceColumnToMovieTable.resx">
+      <DependentUpon>202107190234102_AddPriceColumnToMovieTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

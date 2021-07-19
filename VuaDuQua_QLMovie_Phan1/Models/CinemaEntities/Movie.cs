@@ -16,6 +16,9 @@ namespace VuaDuQua_QLMovie_Phan1.Models.CinemaEntities
         [DisplayName("Hình Ảnh")]
         public string Image { get; set; }
 
+        [DisplayName("Giá Vé:")]
+        public double Price { get; set; }
+
         public ICollection<Show> Shows { get; set; }
     }
 }
