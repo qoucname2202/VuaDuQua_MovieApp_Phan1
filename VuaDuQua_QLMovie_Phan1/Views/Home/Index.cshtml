@@ -25,8 +25,7 @@
                         <a href="single.html">@Html.DisplayFor(modelItem => item.Name)</a>
                     </h4>
                     <div class="info-product-price">
-                        <span class="item_price">$149.00</span>
-                        <del>$280.00</del>
+                        <span class="item_price">@Html.DisplayFor(modelItem => item.Price)</span>
                     </div>
                 </div>
             </div>

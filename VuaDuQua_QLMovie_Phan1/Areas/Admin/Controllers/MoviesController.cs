@@ -11,10 +11,8 @@ using VuaDuQua_QLMovie_Phan1.Models.CinemaEntities;
 
 namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
 {
-    [Authorize]
     public class MoviesController : Controller
     {
-       
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin/Movies
@@ -49,7 +47,7 @@ namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Create([Bind(Include = "Id,Name,Image,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +79,7 @@ namespace VuaDuQua_QLMovie_Phan1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Image")] Movie movie)
+        public ActionResult Edit([Bind(Include = "Id,Name,Image,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
